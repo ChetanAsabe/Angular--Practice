@@ -1,3 +1,37 @@
-<p>course-parent works!</p>
+<app-course-child (courseData)="getCourseData($event)"></app-course-child>
 
-<app-course-child></app-course-child>
+<!-- <div>
+  <p>Course Name - {{ recievedObj.name }}</p>
+  <p>Course Instructor - {{ recievedObj.instructor }}</p>
+  <p>Course Duration - {{ recievedObj.duration }}</p>
+  <p>Course Time - {{ recievedObj.time }}</p>
+</div> -->
+
+<div class="d-flex justify-content-center p-2 m-5">
+  <table class="table rounded-2  overflow-hidden table-striped table-dark   table-bordered w-50">
+    <thead>
+        <tr>
+            <th class="p-4">Course Details</th>
+            <th class="p-4 ">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="p-3 ">Name</td>
+        <td class="p-3 ">{{ recievedObj.name }}</td>
+      </tr>
+      <tr>
+        <td class="p-3 ">Instructor</td>
+        <td class="p-3 ">{{ recievedObj.instructor }}</td>
+      </tr>
+      <tr>
+        <td class="p-3 ">Duration</td>
+        <td class="p-3 ">{{ recievedObj.duration }} Months</td>
+      </tr>
+      <tr>
+        <td class="p-3 ">Time</td>
+        <td class="p-3 ">{{ recievedObj.time }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-course-child',
@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseChildComponent implements OnInit {
 
+  course = {
+    name : 'Angular',
+    instructor : 'Dnyanesh sir',
+    duration : 4,
+    time : '7.30AM - 9.00AM'
+  }
+
+  @Output() courseData  = new EventEmitter<any>();
+
   constructor() { }
 
   ngOnInit(): void {
+    this.courseData.emit(this.course);
   }
 
 }

@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row align-items-center justify-content-center mt-5">
+    <div class="col">
+      <div class="d-flex align-items-center justify-content-center">
+        <input
+          type="checkbox"
+          style="width: 20px; height: 20px"
+          [(ngModel)]="isChecked"
+          (change)="onChange($event)"
+        />
+
+        <span class="p-2">Show/Hide</span>
+      </div>
+    </div>
+
+    <div class="col">
+      <table class="table table-striped mt-5">
+        <tr>
+          <th class="p-2 border border-2">Name</th>
+          <th class="p-2 border border-2">Duration</th>
+        </tr>
+        <tr *ngFor="let course of Courses">
+          <td class="p-2 border border-2">{{ course.name }}</td>
+          <td class="p-2 border border-2">{{ course.duration }}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div style="margin-left: 40px" class="col" [ngSwitch]="month" [ngStyle]="{'color' : 'red'}">
+      <div *ngSwitchCase="'Jan'">This is Jan Month.</div>
+      <div *ngSwitchCase="'Feb'">This is Feb Month.</div>
+      <div *ngSwitchCase="'Mar'">This is Mar Month.</div>
+      <div *ngSwitchCase="'Apr'">This is Apr Month.</div>
+      <div *ngSwitchCase="'May'">This is May Month.</div>
+      <div *ngSwitchCase="'Jun'">This is Jun Month.</div>
+      <div *ngSwitchCase="'Jul'">This is Jul Month.</div>
+      <div *ngSwitchCase="'Aug'">This is Aug Month.</div>
+      <div *ngSwitchCase="'Sept'">This is Sept Month.</div>
+      <div *ngSwitchCase="'Oct'">This is Oct Month.</div>
+      <div *ngSwitchCase="'Nov'">This is Nov Month.</div>
+      <div *ngSwitchCase="'Dec'">This is Dec Month.</div>
+      <div *ngSwitchCase="">This is Not Month.</div>
+    </div>
+  </div>
+
+  <p
+    *ngIf="isChecked"
+    class="rounded-2 border"
+    style="
+      width: 300px;
+      height: auto;
+      padding: 20px;
+      margin-left: 100px;
+      text-justify: distribute;
+      background-color: azure;
+      text-align: justify;
+    "
+  >
+    <b>Directives</b> are a way to extend HTML by attaching custom behaviours to
+    DOM elements or creating new HTML elements. They are a crucial part of
+    Angular’s declarative approach to building user interfaces.
+  </p>
+</div>

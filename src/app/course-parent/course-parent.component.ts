@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseParentComponent implements OnInit {
 
+  recievedObj !: any;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getCourseData(data : any) {
+    console.log(data);
+    this.recievedObj = data;
   }
 
 }

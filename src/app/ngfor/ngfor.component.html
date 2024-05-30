@@ -1,0 +1,23 @@
+<div class="d-flex m-5 gap-5">
+    <h2>Countries & States</h2>
+  <select
+    #select
+    (change)="onCountryChange(select.value)"
+    class="p-2 rounded-1"
+  >
+    <option>Choose a Country</option>
+    <option *ngFor="let c of country" [value]="c.name">{{ c.name }}</option>
+  </select>
+
+  <select class="p-2 rounded-1">
+    <option value="">States</option>
+    <option *ngFor="let s of states" [value]="s">{{ s }}</option>
+  </select>
+</div>
+
+
+<!-- <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle"></button>
+</div> -->
+
+<mat-slide-toggle>Toggle me!</mat-slide-toggle>

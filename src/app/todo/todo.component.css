@@ -1,0 +1,14 @@
+*{
+    font-family: cursive;
+}
+
+tr, td {
+    padding: 20px;
+}
+
+input {
+    width: 15rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+}
