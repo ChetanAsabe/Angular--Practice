@@ -1,0 +1,47 @@
+<mat-card
+  style="
+    max-width: 400px;
+    margin-bottom: 8px;
+    margin: 40px;
+    text-align: center;
+    padding-bottom: 40px;
+  "
+>
+  <mat-card-title>Registration Form</mat-card-title>
+  <mat-card-content>
+    <form #registrationForm="ngForm" (ngSubmit)="onSubmit(registrationForm)">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          type="email"
+          matInput
+          ngModel
+          name="email"
+          email
+          [required]="true"
+        />
+      </mat-form-field>
+      <br />
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input
+          type="password"
+          matInput
+          ngModel
+          name="password"
+          [required]="true"
+        />
+      </mat-form-field>
+      <br />
+      <button
+        style="min-width: 200px"
+        mat-raised-button
+        color="accent"
+        type="submit"
+        [disabled]="!registrationForm.valid"
+      >
+        Submit
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>

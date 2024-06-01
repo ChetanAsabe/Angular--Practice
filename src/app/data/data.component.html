@@ -1,0 +1,154 @@
+<div class="h-100 d-flex align-items-center justify-content-center">
+  <mat-card class="main w-50 h-auto">
+    <mat-card-title><b>Registration Form</b></mat-card-title>
+    <form
+      #dataForm="ngForm"
+      class="d-flex flex-column"
+      (ngSubmit)="onsubmit(dataForm)"
+    >
+      <mat-form-field appearance="outline" class="w-50 pt-4">
+        <mat-label>First Name</mat-label>
+        <input
+          type="text"
+          matInput
+          ngModel
+          name="firstname"
+          [required]="true"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="w-50">
+        <mat-label>Last Name</mat-label>
+        <input type="text" matInput ngModel name="lastname" [required]="true" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="w-50">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput ngModel name="email" [required]="true" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="w-50">
+        <mat-label>Education</mat-label>
+        <input
+          type="text"
+          matInput
+          ngModel
+          name="education"
+          [required]="true"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="w-50">
+        <mat-label>Phone no.</mat-label>
+        <input type="tel" matInput ngModel name="phoneno" [required]="true" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="w-50">
+        <mat-label>Date of birth</mat-label>
+        <input
+          type="date"
+          matInput
+          ngModel
+          name="dateofbirth"
+          [required]="true"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="w-50">
+        <mat-label>Address</mat-label>
+        <input type="text" matInput ngModel name="address" [required]="true" />
+      </mat-form-field>
+
+      <mat-radio-group
+        matInput
+        ngModel
+        name="gender"
+        aria-label="Select an option"
+        class="d-flex align-items-center"
+        [required]="true"
+      >
+        <mat-label><b>Gender</b></mat-label>
+        <mat-radio-button class="p-2" value="male">Male</mat-radio-button>
+        <mat-radio-button class="p-2" value="female">Female</mat-radio-button>
+      </mat-radio-group>
+
+      <button
+        class="p-2 rounded-2 w-50"
+        type="submit"
+        mat-stroked-button
+        color="primary"
+        [disabled]="!dataForm.valid"
+      >
+        Submit
+      </button>
+    </form>
+
+    <!-- <form
+      #dataForm="ngForm"
+      class="d-flex flex-column"
+      (ngSubmit)="onsubmit(dataForm)"
+    >
+      <mat-form-field appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input type="text" matInput ngModel name="firstname" [required]="true" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input type="text" matInput ngModel name="lastname" [required]="true" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput ngModel name="email" [required]="true" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Date of birth</mat-label>
+        <input
+          type="date"
+          matInput
+          ngModel
+          name="dateofbirth"
+          [required]="true"
+        />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Education</mat-label>
+        <input type="text" matInput ngModel name="education" [required]="true" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Phone no.</mat-label>
+        <input type="tel" matInput ngModel name="phoneno" [required]="true" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Address</mat-label>
+        <input type="text" matInput ngModel name="address" [required]="true" />
+      </mat-form-field>
+  
+      <mat-radio-group
+        matInput
+        ngModel
+        name="gender"
+        aria-label="Select an option"
+        class="d-flex align-items-center"
+      >
+        <mat-label>Gender</mat-label>
+        <mat-radio-button value="male">Male</mat-radio-button>
+        <mat-radio-button value="female">Female</mat-radio-button>
+      </mat-radio-group>
+  
+      <button
+        class="p-2 rounded-2"
+        type="submit"
+        mat-stroked-button
+        color="primary"
+        [disabled]="!dataForm.valid"
+      >
+        Submit
+      </button>
+    </form> -->
+  </mat-card>
+</div>

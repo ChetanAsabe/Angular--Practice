@@ -1,5 +1,5 @@
 <div class="d-flex m-5 gap-5">
-    <h2>Countries & States</h2>
+  <h2>Countries & States</h2>
   <select
     #select
     (change)="onCountryChange(select.value)"
@@ -15,9 +15,12 @@
   </select>
 </div>
 
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle">Dropdown Button</button>
 
-<!-- <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle"></button>
-</div> -->
+  <div class="dropdown-menu">
+    <a href="" *ngFor="let c of country">{{c.name}}</a>
+  </div>
+</div>
 
-<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<!-- <mat-slide-toggle>Toggle me!</mat-slide-toggle> -->
